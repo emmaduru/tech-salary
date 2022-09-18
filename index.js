@@ -10,7 +10,7 @@ app.use(express.static("public"))
 
 
 app.get("/", (req, res) => {
-    res.render("index")
+    return res.render("index")
 })
 
 app.post("/add", (req, res) => {
@@ -19,18 +19,29 @@ app.post("/add", (req, res) => {
         json.push(req.body)
         fs.writeFile(process.env.JSON_FILE, JSON.stringify(json), function(err){
             if (err) throw err;
-            res.json({ success: true, message: "Salary successfully added."});
+            return res.json({ success: true, message: "Salary successfully added."});
         });
     })
 })
 
 app.get("/thanks", (req, res) => {
-    res.render("thanks")
+    return res.render("thanks")
 })
 
-app.listen(5000, (e) => {
+// Error handlers
+app.use((req, res, next) => {
+    return res.status(404).render("404")
+})
+
+app.use((err, req, res, next) => {
+    return res.status(500).render("500")
+})
+
+// Set server PORT
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, (e) => {
     if (e) {
         throw e;
     }
-    console.log("Server running at port 5000")
+    console.log(`Server running at port ${PORT}.`)
 })
