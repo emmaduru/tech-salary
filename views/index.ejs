@@ -1,0 +1,131 @@
+<%- include("header") %> 
+
+<h2 class="text-center mb-5">Tech Salary</h2>
+<h5 class="mb-3">Add Your Salary</h5>
+<form method="POST">
+    <div class="form-group mb-3">
+        <label for="company">Company</label>
+        <input required type="text" name="company" placeholder="Company" class="form-control">
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="job-title">Job Title</label>
+        <select required name="job_title" id="" class="form-control">
+            <option value="" selected disabled>---- Select your Job Title -----</option>
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="Product Designer">Product Designer</option>
+            <option value="Frontend Software Engineer">Frontend Software Engineer</option>
+            <option value="Backend Software Engineer">Backend Software Engineer</option>
+            <option value="Fullstack Software Engineer">Fullstack Software Engineer</option>
+            <option value="Mobile Software Engineer">Mobile Software Engineer</option>
+            <option value="Embedded Systems Software Engineer">Embedded Systems Software Engineer</option>
+            <option value="Web Developer">Web Developer</option>
+            <option value="Data Scientist">Data Scientist</option>
+            <option value="Data Analyst">Data Analyst</option>
+            <option value="Blockchain Software Engineer">Blockchain Software Engineer</option>
+            <option value="Product Manager">Product Manager</option>
+            <option value="DevOps Software Engineer">DevOps Software Engineer</option>
+        </select>
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="experience">Experience</label>
+        <input required type="number" class="form-control" name="experience" placeholder="Years of Experience">
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="Location">Location</label>
+        <select required name="location" id="" class="form-control">
+            <option value="" selected disabled>----- Select your Location -----</option>
+            <option value="Abia">Abia</option>
+            <option value="Abuja">Abuja</option>
+            <option value="Adamawa">Adamawa</option>
+            <option value="Akwa Ibom">Akwa Ibom</option>
+            <option value="Anambra">Anambra</option>
+            <option value="Bauchi">Bauchi</option>
+            <option value="Bayelsa">Bayelsa</option>
+            <option value="Benue">Benue</option>
+            <option value="Borno">Borno</option>
+            <option value="Cross River">Cross River</option>
+            <option value="Delta">Delta</option>
+            <option value="Ebonyi">Ebonyi</option>
+            <option value="Edo">Edo</option>
+            <option value="Ekiti">Ekiti</option>
+            <option value="Enugu">Enugu</option>
+            <option value="Gombe">Gombe</option>
+            <option value="Imo">Imo</option>
+            <option value="Jigawa">Jigawa</option>
+            <option value="Kaduna">Kaduna</option>
+            <option value="Kano">Kano</option>
+            <option value="Katsina">Katsina</option>
+            <option value="Kebbi">Kebbi</option>
+            <option value="Kogi">Kogi</option>
+            <option value="Kwara">Kwara</option>
+            <option value="Lagos">Lagos</option>
+            <option value="Nasarawa">Nasarawa</option>
+            <option value="Niger">Niger</option>
+            <option value="Ogun">Ogun</option>
+            <option value="Ondo">Ondo</option>
+            <option value="Osun">Osun</option>
+            <option value="Oyo">Oyo</option>
+            <option value="Plateau">Plateau</option>
+            <option value="Rivers">Rivers</option>
+            <option value="Sokoto">Sokoto</option>
+            <option value="Taraba">Taraba</option>
+            <option value="Yobe">Yobe</option>
+            <option value="Zamfara">Zamfara</option>
+            <option value="Outside Nigeria">Outside Nigeria</option>
+        </select>
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="arrangement">Work Arrangement</label>
+        <select required name="arrangement" class="form-control">
+            <option value="" selected disabled>----- Select your Working Arrangement -----</option>
+            <option value="In Office">In Office</option>
+            <option value="Fully Remote">Fully Remote</option>
+            <option value="Hybrid">Hybrid</option>
+        </select>
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="salary">Salary</label>
+        <span class="form-group-text" id="basic-addon1">₦</span>
+        <input required type="number" class="form-control" name="salary" placeholder="Salary" aria-label="Salary" aria-describedby="basic-addon1">
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="gender">Gender</label>
+        <select required name="gender" id="" class="form-control">
+            <option value="" selected disabled>Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="education">Education</label>
+        <select name="education" class="form-control" id="">
+            <option value="" selected disabled>----- Select your Education Level -----</option>
+            <option value="Secondary School or Equivalent">Secondary School or Equivalent</option>
+            <option value="HND or OND (Computer Science)">HND or OND (Computer Science)</option>
+            <option value="HND or OND (non-Computer Science)">HND or OND (non-Computer Science)</option>
+            <option value="Bachelor's Degree (Computer Science)">Bachelor's Degree (Computer Science)</option>
+            <option value="Bachelor's Degree (non-Computer Science)">Bachelor's Degree (non-Computer Science)</option>
+            <option value="Masters Degree (Computer Science)">Masters Degree (Computer Science)</option>
+            <option value="Masters Degree (non-Computer Science)">Masters Degree (non-Computer Science)</option>
+            <option value="PhD (Computer Science)">PhD (Computer Science)</option>
+            <option value="PhD (non-Computer Science)">PhD (non-Computer Science)</option>
+        </select>
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="contributions">Additional Contributions</label>
+        <textarea name="contributions" id="" cols="30" rows="5" class="form-control" placeholder="Additional Contributions"></textarea>
+    </div>
+
+    <div class="form-group mb-3">
+        <button type="submit" class="btn btn-primary">Submit Salary Info</button>
+    </div>
+</form>
+<%- include("footer") %> 
