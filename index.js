@@ -10,7 +10,11 @@ app.use(express.static("public"))
 
 
 app.get("/", (req, res) => {
-    return res.render("index")
+    return res.redirect("/add_salary");
+})
+
+app.get("/add_salary", (req, res) => {
+    return res.render("index);
 })
 
 app.post("/add", (req, res) => {
